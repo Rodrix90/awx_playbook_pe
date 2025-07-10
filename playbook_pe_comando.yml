@@ -1,8 +1,8 @@
 ---
--
-name:Ejecutar comando en PE Nokia 7750
-hosts:all
-gather_facts:no
-tasks:-
-name:Mostrar versión del router
-ansible.builtin.shell: show version
+- name: Ejecutar comando en PE Nokia 7750
+  hosts: all
+  gather_facts: no
+  tasks:
+    - name: Mostrar versión del router
+      ansible.builtin.shell: show version
+
