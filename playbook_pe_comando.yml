@@ -2,7 +2,10 @@
 - name: Ejecutar comando en PE Nokia 7750
   hosts: all
   gather_facts: no
+  connection: network_cli
+
   tasks:
     - name: Mostrar versión del router
-      ansible.builtin.shell: show version
-
+      nokia.sros.command:
+        commands:
+          - show version
